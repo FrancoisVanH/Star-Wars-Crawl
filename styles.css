@@ -1,0 +1,52 @@
+/*  CSS  */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600&display=swap');
+/*  Style  */
+body{
+    background-color: #000;
+    overflow: hidden;
+    font-family: 'Libre Franklin';
+/*  Pushing down the wrapper by half/page  */
+    margin: 50% 0 0 0;
+    position: relative;
+}
+/*  Sudo element aka gradient  */
+body::after{
+    content: '';
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 41%, rgba(0,0,0,0.5060399159663865) 88%, rgba(0,0,0,0) 99%);
+}
+.wrapper{
+    display: flex;
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+/*  Giving possibility to play w/ perspective  */
+    perspective: 450px;
+}
+.scroll-text{
+    color: #FFE81F;
+    font-size: 3vw;
+    line-height: 1.2em;
+    font-weight: bold;
+    text-align: justify;
+    position: relative;
+    animation: scroll 160s linear forwards;
+}
+h1, h2 {
+    text-align: center;
+}
+/*  Animations  */
+@keyframes scroll {
+    from{ top: 0; 
+/*  Applying perspective  */
+    transform: translateZ(0) rotateX(20deg); 
+    }
+    to{top: -7500px;
+    /*  Applying perspective  */
+    transform: translateZ(-2500px) rotateX(21deg);
+    }
+}
+
