@@ -2,12 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600&display=swap');
 /*  Style  */
 body{
-    background-color: #000;
+    background: url('Stars.png');
     overflow: hidden;
     font-family: 'Libre Franklin';
 /*  Pushing down the wrapper by half/page  */
     margin: 50% 0 0 0;
     position: relative;
+}
+header>h2 {
+    font-family: 'Libre Franklin';
+    color: #34aeeb;
 }
 /*  Sudo element aka gradient  */
 body::after{
